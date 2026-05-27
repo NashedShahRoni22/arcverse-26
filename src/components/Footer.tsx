@@ -55,7 +55,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-16 flex flex-col justify-between gap-2 border-t border-border pt-6 font-mono text-xs uppercase tracking-[0.2em] text-text-secondary md:flex-row">
-          <span>© 2025 arcverse. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} arcverse. All rights reserved.</span>
           <span>arcverse.com</span>
         </div>
       </div>
