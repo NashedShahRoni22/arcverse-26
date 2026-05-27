@@ -1,0 +1,122 @@
+@import url("https://api.fontshare.com/v2/css?f[]=clash-display@600,700,800&f[]=cormorant-garamond@300i&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme inline {
+  --font-display: "Clash Display", system-ui, sans-serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-serif: "Cormorant Garamond", serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-accent: var(--accent);
+  --color-accent-alt: var(--accent-alt);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --animate-marquee: marquee 30s linear infinite;
+}
+
+:root {
+  --radius: 0.5rem;
+
+  --bg: oklch(0.145 0 0);
+  --surface: oklch(0.18 0 0);
+  --border: oklch(0.25 0 0);
+  --text-primary: oklch(0.97 0 0);
+  --text-secondary: oklch(0.62 0 0);
+  --accent: oklch(0.62 0.22 282);
+  --accent-alt: oklch(0.7 0.21 22);
+
+  --background: var(--bg);
+  --foreground: var(--text-primary);
+  --card: var(--surface);
+  --card-foreground: var(--text-primary);
+  --popover: var(--surface);
+  --popover-foreground: var(--text-primary);
+  --primary: var(--accent);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: var(--surface);
+  --secondary-foreground: var(--text-primary);
+  --muted: var(--surface);
+  --muted-foreground: var(--text-secondary);
+  --destructive: var(--accent-alt);
+  --destructive-foreground: oklch(1 0 0);
+  --input: var(--border);
+  --ring: var(--accent);
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: white;
+  }
+
+  *:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    body { cursor: none; }
+    a, button, [role="button"], input, textarea, select { cursor: none; }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
