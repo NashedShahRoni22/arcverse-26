@@ -20,7 +20,7 @@ const variants = {
   primary:
     "h-12 overflow-hidden rounded-full bg-accent px-8 text-white hover:shadow-[0_8px_30px_-8px_rgba(108,99,255,0.6)]",
   ghost:
-    "h-12 overflow-hidden rounded-full border border-text-primary px-8 text-text-primary hover:bg-text-primary hover:text-white",
+    "h-12 overflow-hidden rounded-full border border-text-primary px-8 text-text-primary hover:bg-text-primary hover:text-black",
   text: "py-1 text-text-primary",
 };
 

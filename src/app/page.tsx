@@ -18,7 +18,7 @@ export default function Home() {
       <AboutTeaser />
       <FeaturedWork />
       <ServicesStack />
-      <ServicesAccordion />
+      {/* <ServicesAccordion /> */}
       <Pricing />
       <FAQ />
       <CreativePlatforms />

@@ -37,7 +37,7 @@ export default function ContactPage() {
       <section className="px-6 pb-16 pt-40 md:px-10">
         <div className="mx-auto max-w-[1280px]">
           <div className="mb-6 font-mono text-xs uppercase tracking-[0.2em] text-text-secondary">
-            Contact · Available 2025
+            Contact · Available for projects
           </div>
           <h1 className="font-display text-[12vw] font-bold leading-[0.95] tracking-tighter md:text-[8vw] lg:text-[120px]">
             {"Let's talk.".split("").map((c, i) => (

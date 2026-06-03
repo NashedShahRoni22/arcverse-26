@@ -29,13 +29,13 @@ export function Nav() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-[1000] transition-all duration-300 ${
-        scrolled ? "border-b border-border bg-bg/85 backdrop-blur-xl" : "bg-transparent"
+      className={`fixed inset-x-0 top-0 z-1000 transition-all duration-300 ${
+        scrolled ? "border-b border-border bg-bg md:bg-bg/85 md:backdrop-blur-xl" : "bg-bg md:bg-transparent"
       }`}
     >
-      <div className="mx-auto flex h-20 max-w-[1280px] items-center justify-between px-6 md:px-10">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 md:px-10">
         <Link href="/" className="font-display text-xl font-semibold tracking-tight">
-          arc<span className="text-accent">verse</span>
+          ARC<span className="text-accent">VERSE</span>
         </Link>
 
         <nav className="hidden items-center gap-10 md:flex">
@@ -70,7 +70,7 @@ export function Nav() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 top-20 z-[999] flex flex-col gap-8 bg-bg px-8 pt-16 md:hidden"
+            className="fixed inset-0 top-20 z-999 flex flex-col gap-8 bg-bg px-8 pt-16 md:hidden"
           >
             {links.map((l, i) => (
               <motion.div
